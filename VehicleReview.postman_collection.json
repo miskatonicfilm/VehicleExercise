@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "16842073-a4bf-4986-9cf2-c886e7c09bc1",
+		"name": "VehicleReview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post a Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicleId\":3,\r\n    \"review\":\"Smash car\",\r\n    \"userName\":\"Hulk\",\r\n    \"star\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reviews By Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reviews/Wasp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews",
+						"Wasp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Reviews Sorted By Star",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
